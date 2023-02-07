@@ -36,7 +36,9 @@ namespace InMemory.Caching.Controllers
 
         #endregion
 
-        [HttpGet("/set")] 
+        #region Sliding - Absolute Expiration
+
+        [HttpGet("/set")]
         public void SetDate()
         {
             _memoryCache.Set<DateTime>("date", DateTime.Now, options: new()
@@ -51,6 +53,10 @@ namespace InMemory.Caching.Controllers
         {
             return _memoryCache.Get<DateTime>("date");
         }
+
+        #endregion
+
+
 
     }
 }
