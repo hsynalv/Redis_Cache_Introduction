@@ -7,6 +7,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddMemoryCache(); // Memory Cache çalýþmak istendiði zaman eklenmesi gerekiyor.
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
